@@ -7,6 +7,12 @@ import pbcard4 from './Images/pbcard4.jpeg';
 import pbcard5 from './Images/pbcard5.jpeg';
 import pbcard6 from './Images/pbcard6.jpeg';
 
+const Pickcards = ({photo}) => (
+  <div className="pb-cards">
+    <img src={photo} alt="" />
+  </div>
+);
+
 const Picks = () => (
   <div className="picks">
     <div className="picks-block">
@@ -18,24 +24,14 @@ Imdb Picks:
         </p>
       </div>
       <div className="pb-middle">
-        <div className="pb-cards">
-          <img src={pbcard1} alt="" />
-        </div>
-        <div className="pb-cards">
-          <img src={pbcard2} alt="" />
-        </div>
-        <div className="pb-cards">
-          <img src={pbcard3} alt="" />
-        </div>
-        <div className="pb-cards">
-          <img src={pbcard4} alt="" />
-        </div>
-        <div className="pb-cards">
-          <img src={pbcard5} alt="" />
-        </div>
-        <div className="pb-cards">
-          <img src={pbcard6} alt="" />
-        </div>
+        <Pickcards photo={pbcard1} />
+        <Pickcards photo={pbcard2} />
+        <Pickcards photo={pbcard3} />
+        <Pickcards photo={pbcard4} />
+        <Pickcards photo={pbcard5} />
+        <Pickcards photo={pbcard6} />
+
+
       </div>
       <div className="pb-bottom">
         <p>

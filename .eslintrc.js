@@ -21,7 +21,10 @@ module.exports = {
     'react',
   ],
   rules: {
-    'react/button-has-type':0
+    'react/button-has-type':0,
+    'prop-types':0,
+    'jsx-pascal-case':0,
+    'jsx-no-undef':0
     
   },
 };

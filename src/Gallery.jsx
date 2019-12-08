@@ -11,6 +11,16 @@ import gbcard8 from './Images/gbcard8.jpeg';
 import gbcard9 from './Images/gbcard9.jpeg';
 import gbcard10 from './Images/gbcard10.jpeg';
 
+
+const Gallerycard = ({ movie, name, price }) => (
+  <div className="gallery-card">
+    <img src={movie} alt="" />
+    <h3>{name}</h3>
+    <h4>{price}</h4>
+  </div>
+
+);
+
 const Gallery = () => (
   <div className="gallery">
     <div className="gallery-block">
@@ -21,61 +31,60 @@ const Gallery = () => (
         </ul>
       </div>
       <div className="gb-middle">
-        <div className="gallery-card">
-          <img src={gbcard1} alt="" />
-          <div className="hover-content">
-            <i className="material-icons">play_circle_filled</i>
-            <h5>Watch Trailer</h5>
-          </div>
-          <h3>Fantastic Four</h3>
-          <h4>$25.7M</h4>
-        </div>
-        <div className="gallery-card">
-          <img src={gbcard2} alt="" />
-          <h3>the man from u.n.c.l.e</h3>
-          <h4>$28.7M</h4>
-        </div>
-        <div className="gallery-card">
-          <img src={gbcard3} alt="" />
-          <h3>shaun the sheep movie</h3>
-          <h4>$11.2M</h4>
-        </div>
-        <div className="gallery-card">
-          <img src={gbcard4} alt="" />
-          <h3>The gift</h3>
-          <h4>$13.2M</h4>
-        </div>
-        <div className="gallery-card">
-          <img src={gbcard5} alt="" />
-          <h3>Mission:impossible5</h3>
-          <h4>$17.7M</h4>
-        </div>
-        <div className="gallery-card">
-          <img src={gbcard6} alt="" />
-          <h3>hotel transylvania2</h3>
-          <h4>$33.2M</h4>
-        </div>
-        <div className="gallery-card">
-          <img src={gbcard7} alt="" />
-          <h3>sicario</h3>
-          <h4>$12.1M</h4>
-        </div>
-        <div className="gallery-card">
-          <img src={gbcard8} alt="" />
-          <h3>the martian</h3>
-          <h4>$54.3M</h4>
-        </div>
-        <div className="gallery-card">
-          <img src={gbcard9} alt="" />
-          <h3>the scorch trials</h3>
-          <h4>$7.8M</h4>
-        </div>
-        <div className="gallery-card">
-          <img src={gbcard10} alt="" />
-          <h3>everest</h3>
-          <h4>$33.31M</h4>
-        </div>
+        <Gallerycard
+          movie={gbcard1}
+          name="Fantastic Four"
+          price="$25.7M"
+        />
+        <Gallerycard
+          movie={gbcard2}
+          name="the man fron u.n.c.l.e"
+          price="$28.7M"
+        />
+        <Gallerycard
+          movie={gbcard3}
+          name="shaun the sheep movie"
+          price="$11.2M"
+        />
+        <Gallerycard
+          movie={gbcard4}
+          name="The gift"
+          price="$13.2M"
+        />
+        <Gallerycard
+          movie={gbcard5}
+          name="Mission:impossible5"
+          price="$17.7M"
+        />
+        <Gallerycard
+          movie={gbcard6}
+          name="hotel transylvania2"
+          price="$33.2M"
+        />
+        <Gallerycard
+          movie={gbcard7}
+          name="sicario"
+          price="$12.2M"
+        />
+        <Gallerycard
+          movie={gbcard8}
+          name="the martian"
+          price="54.3M"
+        />
+        <Gallerycard
+          movie={gbcard9}
+          name="the scorch trials"
+          price="7.8M"
+        />
+        <Gallerycard
+          movie={gbcard10}
+          name="everest"
+          price="33.38M"
+        />
+
+
       </div>
+
       <div className="gb-bottom">
         <p>See More</p>
       </div>

@@ -3,22 +3,34 @@ import './_navigation.scss';
 import logo from './Images/logo.png';
 import navsoci from './Images/navsoci.jpg';
 
+const Logo = () => (
+  <div className="logo">
+
+    <img src={logo} alt="logo" />
+  </div>
+);
+const Menu = ({ menu }) => (
+  <div className="menu">
+    <ul>
+      {menu.map((m) => (<li>{m.name}</li>))}
+
+
+    </ul>
+  </div>
+
+);
+
 const Navigation = () => (
   <div className="navigation">
-    <div className="logo">
+    <Logo />
+    <Menu menu={[{ name: 'Movies' },
+      { name: 'TV Series' },
+      { name: 'News' },
+      { name: 'Photos' },
+      { name: 'Events' },
+      { name: 'Trailers' }]}
+    />
 
-      <img src={logo} alt="logo" />
-    </div>
-    <div className="menu">
-      <ul>
-        <li>Movies</li>
-        <li>TV Series</li>
-        <li>News</li>
-        <li>Photos</li>
-        <li>Events</li>
-        <li>Trailers</li>
-      </ul>
-    </div>
     <div className="search">
       <input type="text" />
       <button>Search</button>
