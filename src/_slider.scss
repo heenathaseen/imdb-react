@@ -1,0 +1,220 @@
+@import './variables';
+@import './mixin';
+
+.slider {
+    background-image: url(./Images/slidebg.jpg);
+    background-color: #8c8c8c;
+    background-blend-mode: overlay;
+    height: 450px;
+    border-bottom: 5px solid #fbb812;
+    background-repeat: none;
+    .slider-block {
+        background-repeat: no-repeat;
+        background-image: linear-gradient(to bottom, rgba(169, 169, 169, 0.52), #540d0d), url(./Images/banner.jpg);
+        background-repeat: no-repeat;
+        width: $middleWidth;
+        @include layoutMargin;
+        display: grid;
+        grid-template-columns: 4fr 1fr;
+        .sb-left {
+            padding: 40px;
+            display: flex;
+            flex-direction: column;
+            .sbl-heading {
+                display: grid;
+                grid-template-columns: 5fr 1fr;
+                .sblh-left {
+                    h3 {
+                        margin: 0;
+                        font-family: $commonFont;
+                        font-size: 24px;
+                        text-transform: uppercase;
+                        color: #fff;
+                        span {
+                            color: #fbb812;
+                            font-size: 14px;
+                            padding: 0 10px;
+                        }
+                    }
+                    .sbl-sub-heading {font-family: 'Lobster', cursive;
+                       
+                        ul { margin: 0 -48px;
+                            font-size: 12px;
+                            
+                            li  {
+                                margin: 0 10px;
+                                float: left;
+                                text-decoration: none;
+                                color: $color;
+                                list-style: none;
+                                
+                            }
+                            li:nth-child(even){
+                                // color: black;
+                                list-style-type: disc;
+                            }
+                        }
+                        p{
+                            color: red;
+                            margin-left: 240px;
+                        }
+                    }
+                }
+                .sblh-right{
+                    button{
+                        background: pink;
+                        border: 10px solid white;
+                    }
+                    img{
+                        width: 24px;
+                        height: 24px;
+                    }
+                }
+            }
+            .sbl-rating {
+                display: grid;
+                grid-template-columns: 1fr 6fr;
+                .sblr-left {
+                    position: relative;
+                    height: 40px;
+                    width: 67px;
+                    height: 67px;
+                    border-radius: 50%;
+                    border: 5px solid #fbb812;
+                    margin: 10px;
+                    p {
+                        font-size: 19px;
+                        font-weight: bold;
+                        font-family: $commonFont;
+                        margin: 0;
+                        top: 21px;
+                        left: 16px;
+                        position: absolute;
+                        color: #fbb812;
+                    }
+                }
+                .sblr-right {margin: 0px -65px;
+                    ul {
+                        font-size: 12px;
+                        li {list-style: none;
+                            p{
+                                font-family: 'Kaushan Script', cursive;
+                                color: $color;
+                                margin-right: 50px;
+                                font-weight: bold;
+                                
+                            }
+                        }
+                    }
+                }
+            }
+            .sbl-summary {
+                h4 {
+                    margin: 0;
+                    font-family: 'Grenze', serif;
+                    font-size: 18px;
+                    color: #ddd;
+
+                }
+
+                p {
+                    margin: 0;
+                    font-family: 'Pacifico', cursive;
+                    font-size: 11.4px;
+                    font-weight: bold;
+                    text-align: justify;
+                    color: #ddd;
+                    padding: 10px 20px 10px 0;                  
+                }
+                ul {
+
+                    li{
+                      
+                        p span{
+                            color: yellow;
+                            font-family: 'Cinzel', serif;
+                        }
+                    }
+                    li:nth-child(odd){
+                    list-style-type: square;
+                    }
+                    li:nth-child(even){
+                        list-style-type: square;
+                    }
+
+                    ul{
+                        color: red;        
+ 
+                        margin: -38px -5px;  
+                    }
+                    li{
+                        float: left;
+                       
+                        padding: 4px;
+
+
+                        li:nth-child(odd){
+                            list-style-type: none;
+                            border-radius: 50px;
+                        }
+                        li:nth-child(even){
+                            list-style-type: none;
+                        }
+
+
+                        img{
+                            border-radius: 50%;
+                            width: 24px;
+                            height: 24px;
+                        }
+                    }
+                        
+                }
+            }
+            .sbl-button {
+                display: grid;
+                height: 47px;
+                grid-template-columns: 200px 200px;
+                grid-gap: 30px;
+                font-family: 'Lobster', cursive;
+              
+                .watchlist-btn {
+                    border-radius: 5px;
+                    background: #fbb812;
+                    padding: 13px 10px;
+                    p {
+                        display: inline;
+                        padding: 0 11px;
+                    }
+                }
+                .watchtrailer-btn {
+                    border-radius: 5px;
+                    background: #fff;
+                    padding: 13px 15px;
+                    p {
+                        display: inline;
+                        padding: 0 10px;
+                    }
+                }
+            }
+        }
+        .sb-right {
+            img {
+                position: relative;
+                width: 240px;
+                top: 40px;
+                right: 30px;
+            }
+        }
+    }
+}
+
+@media only screen and (max-width:320px){
+    .slider{
+        display: none;
+    }
+}
+@media only screen and (min-width : 1024px){
+    
+}
+

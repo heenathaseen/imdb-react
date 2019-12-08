@@ -1,0 +1,52 @@
+@import './variables';
+@import './mixin';
+
+.picks{
+    background: #e4e4e4;
+    padding: 80px 0;
+    .picks-block{
+        width: $middleWidth;
+        @include layoutMargin;
+        background: #fff;
+        .pb-top {
+            p {
+                font-family: $commonFont;
+                text-transform: uppercase;
+                text-align: center;
+                padding: 30px 0 10px 0;
+                font-weight: bold;
+                span {
+                    font-weight: normal;
+                }
+            }
+        }
+        .pb-middle{
+            display: grid;
+            grid-template-columns: repeat(6,1fr);
+            grid-gap: 25px;
+            margin: 30px 30px;
+            img {
+                width: 100%;
+            }
+        }
+        .pb-bottom{
+            p {
+                text-align: center;
+                margin: 20px;
+                font-family: $commonFont;
+                font-size: 14px;
+                color: grey;
+            }
+            h4 {
+                margin: 0;
+                padding-bottom: 30px;
+                text-transform: uppercase;
+                font-family: $commonFont;
+                font-size: 12px;
+                text-align: center;
+                text-decoration: underline;
+            }
+        }
+        
+    }
+}

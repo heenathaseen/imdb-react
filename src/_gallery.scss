@@ -1,0 +1,155 @@
+@import './variables';
+@import './mixin';
+
+.gallery {
+    background: #e4e4e4;
+    .gallery-block {
+        width: $middleWidth;
+        @include layoutMargin;
+        .gb-top {
+            display: grid;
+            ul {
+                padding: 20px 0;
+                li {
+                    float: left;
+                    margin: 0 20px 0  0;
+                    font-family: $commonFont;
+                    text-transform: uppercase;
+                    font-weight: 100;
+                    color: gray;
+                    padding-right: 20px;
+                }
+                li:nth-child(odd) {
+                    list-style-type: none;
+                    color: #000;
+                    font-weight: bold;
+                }
+            }
+        }
+        .gb-middle {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+            grid-gap: 15px;
+            .gallery-card {
+                background: #fff;
+                // box-shadow: 1px 1px #c3c3c3;
+                padding: 15px;
+                img {
+                    width: 100%;
+                }
+                h3 {
+                    margin: 0;
+                    margin-top: 10px;
+                    text-transform: uppercase;
+                    font-family: $commonFont;
+                    font-size: 14px;
+                }
+                h4 {
+                    margin: 0;
+                    margin-top: 5px;
+                    text-transform: uppercase;
+                    font-family: $commonFont;
+                    font-size: 12px;
+                    color: grey;
+                }
+            }
+            .gallery-card:hover {
+                box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+                cursor: pointer;
+                img {
+                    opacity: 0.4;
+                }
+            }
+        }
+        .gb-bottom {
+            p {
+                text-align: center;
+                padding: 40px 0;
+                margin: 0;
+                text-transform: uppercase;
+                font-family: $commonFont;
+                font-size: 12px;
+                text-decoration: underline;
+                font-weight: bold;
+            }
+        }
+    }
+}
+@media only screen and (max-width:600px){
+
+.gallery {
+    background: #e4e4e4;
+    .gallery-block {
+        width: $middleWidth;
+        @include layoutMargin;
+        .gb-top {
+            display: grid;
+            ul {
+                padding: 20px 0;
+                li {
+                    float: left;
+                    margin: 0 20px 0  0;
+                    font-family: $commonFont;
+                    text-transform: uppercase;
+                    font-weight: 100;
+                    color: gray;
+                    padding-right: 20px;
+                }
+                li:nth-child(odd) {
+                    list-style-type: none;
+                    color: #000;
+                    font-weight: bold;
+                }
+            }
+        }
+        .gb-middle {
+            display: grid;
+            grid-template-columns: 1fr;
+            grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+            //grid-gap: 15px;
+            .gallery-card {
+                background: #fff;
+                // box-shadow: 1px 1px #c3c3c3;
+                padding: 15px;
+                img {
+                    width: 300px;
+                }
+                h3 {
+                    margin: 0;
+                    margin-top: 10px;
+                    text-transform: uppercase;
+                    font-family: $commonFont;
+                    font-size: 14px;
+                }
+                h4 {
+                    margin: 0;
+                    margin-top: 5px;
+                    text-transform: uppercase;
+                    font-family: $commonFont;
+                    font-size: 12px;
+                    color: grey;
+                }
+            }
+            .gallery-card:hover {
+                box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+                cursor: pointer;
+                img {
+                    opacity: 0.4;
+                }
+            }
+        }
+        .gb-bottom {
+            p {
+                text-align: center;
+                padding: 40px 0;
+                margin: 0;
+                text-transform: uppercase;
+                font-family: $commonFont;
+                font-size: 12px;
+                text-decoration: underline;
+                font-weight: bold;
+            }
+        }
+    }
+}
+}

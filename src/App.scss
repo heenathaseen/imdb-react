@@ -1,0 +1,19 @@
+@import './navigation';
+@import './slider';
+@import './gallery';
+@import './bday';
+@import './picks';
+@import './footer';
+
+body {
+    padding: 0;
+    margin: 0;
+    
+}
+@media only screen and (max-width: 320px) {
+    
+    body {
+        padding: 0;
+        margin: 0;
+    }
+  }

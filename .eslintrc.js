@@ -21,5 +21,7 @@ module.exports = {
     'react',
   ],
   rules: {
+    'react/button-has-type':0
+    
   },
 };
